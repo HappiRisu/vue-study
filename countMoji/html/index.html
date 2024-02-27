@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>사람인 글자수 세기</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="saramin">
+      <h1>글자수세기</h1>
+      <div class="box">
+        <div class="string-length">
+          <textarea placeholder="내용을 입력해주세요"></textarea>
+        </div>
+        <div class="str-info">
+          <p>공백 포함 <span>0</span> 자 | <span>0</span> byte</p>
+          <p>공백 제외 <span>0</span> 자 | <span>0</span> byte</p>
+        </div>
+        <div class="btn-area">
+          <button onclick="allCopy()">전체복사</button>
+          <button onclick="allClear()">초기화</button>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
