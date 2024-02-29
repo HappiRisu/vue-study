@@ -15,16 +15,24 @@ li {
   list-style-type: none;
 }
 
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .container {
   width: 100%;
   max-width: 350px;
   margin: 0 auto;
+
   border: 1px solid #000;
+  border-top: none;
 }
 
 /* header */
 .header .nav__list {
-  margin-top: 20px;
   height: 60px;
   display: flex;
 }
@@ -47,6 +55,12 @@ li {
 
 .content-wrap {
   padding: 15px;
+}
+
+.content-wrap {
+  min-height: 500px;
+  display: flex;
+  align-items: center;
 }
 
 .content__item {
