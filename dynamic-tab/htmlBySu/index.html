@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>탭 메뉴 UI</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="tab">
+      <div class="tab__menu">
+        <button class="tab__menu-item" for="home" onclick="showTab('home')">
+          Home
+        </button>
+        <button
+          class="tab__menu-item active"
+          for="about"
+          onclick="showTab('about')"
+        >
+          About
+        </button>
+        <button
+          class="tab__menu-item"
+          for="contact"
+          onclick="showTab('contact')"
+        >
+          Contact
+        </button>
+      </div>
+      <div class="tab__content">
+        <div class="tab__content-item" data-tab="home">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Repudiandae, ratione. Reprehenderit iusto error corrupti accusantium
+            vero, unde earum harum illum minus, ducimus molestiae minima
+            excepturi sit consectetur, velit eum cumque?
+          </p>
+          <img src="https://source.unsplash.com/700x350" alt="" />
+          <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident
+            possimus ullam earum odit error est perferendis temporibus libero
+            consectetur quidem quia praesentium maiores repellat nihil placeat
+            vel, eum sint culpa.
+          </p>
+        </div>
+        <div class="tab__content-item" data-tab="about">
+          <img src="https://source.unsplash.com/600x500" alt="" />
+          <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident
+            possimus ullam earum odit error est perferendis temporibus libero
+            consectetur quidem quia praesentium maiores repellat nihil placeat
+            vel, eum sint culpa.
+          </p>
+        </div>
+        <div class="tab__content-item" data-tab="contact">
+          <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis
+            ipsam quas animi, quam eum quae eius veniam consequuntur aliquam
+            odit similique et numquam sed nihil suscipit voluptatem, cupiditate,
+            blanditiis reprehenderit.
+          </p>
+          <img src="https://source.unsplash.com/600x240" alt="" />
+        </div>
+      </div>
+    </div>
+    <script>
+      function showTab(tabName) {
+        // 모든 탭 버튼과 탭 내용 요소를 가져옵니다.
+        const tabButtons = document.querySelectorAll(".tab__menu-item");
+        const tabContents = document.querySelectorAll(".tab__content-item");
+
+        // 모든 탭 버튼과 탭 내용의 active 클래스를 제거합니다.
+        tabButtons.forEach((button) => button.classList.remove("active"));
+        tabContents.forEach((content) => content.classList.remove("active"));
+
+        // 클릭한 탭 버튼과 해당 탭 내용에 active 클래스를 추가합니다.
+        const selectedButton = document.querySelector(
+          `[onclick="showTab('${tabName}')"]`
+        );
+        const selectedContent = document.querySelector(
+          `[data-tab="${tabName}"]`
+        );
+        selectedButton.classList.add("active");
+        selectedContent.classList.add("active");
+      }
+    </script>
+  </body>
+</html>
