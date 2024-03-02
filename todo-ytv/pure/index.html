@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <!-- greeting -->
+      <section class="greeting">
+        <h2 class="title">
+          What's up
+          <input type="text" value="name here" />
+        </h2>
+      </section>
+      <!-- todo form -->
+      <section class="create-todo">
+        <h3>create a todo</h3>
+
+        <form>
+          <h4>what's on you todo list?</h4>
+
+          <input type="text" placeholder="e.g make a video" />
+
+          <h4>pick a category</h4>
+
+          <div class="options">
+            <label>
+              <input type="radio" name="category" value="business" />
+              <span class="bubble business"></span>
+              <div>Business</div>
+            </label>
+
+            <label>
+              <input type="radio" name="category" value="personal" />
+              <span class="bubble personal"></span>
+              <div>Personal</div>
+            </label>
+          </div>
+
+          <input type="submit" value="Add Todo" />
+        </form>
+      </section>
+
+      <!-- todo list -->
+      <section class="todo-list">
+        <h3>Todo List</h3>
+
+        <div class="list">
+          <div class="todo-item">
+            <label>
+              <input type="checkbox" />
+              <span class="bubble"></span>
+            </label>
+
+            <div class="todo-content">
+              <input type="text" />
+            </div>
+
+            <div class="actions">
+              <button class="delete">Delete</button>
+            </div>
+          </div>
+        </div>
+        <div class="list">
+          <div class="todo-item">
+            <label>
+              <input type="checkbox" />
+              <span class="bubble"></span>
+            </label>
+
+            <div class="todo-content">
+              <input type="text" />
+            </div>
+
+            <div class="actions">
+              <button class="delete">Delete</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
