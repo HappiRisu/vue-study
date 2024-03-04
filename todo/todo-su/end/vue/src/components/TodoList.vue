@@ -1,8 +1,12 @@
 <script setup>
-import { ref } from "vue";
-import TodoListInput from "@/components/TodoListInput.vue";
-import TodoListItem from "@/components/TodoListItem.vue";
+import { ref } from 'vue';
+import TodoListInput from '@/components/TodoListInput.vue';
+import TodoListItem from '@/components/TodoListItem.vue';
+
+//Done
 const listItem = ref([]);
+
+//Done
 const listItemPush = (item) => {
   const newItem = {
     id: Math.random(),
@@ -11,20 +15,20 @@ const listItemPush = (item) => {
   };
   listItem.value.push(newItem);
 };
+//Done
 const listItemDelete = (item) => {
   listItem.value = listItem.value.filter((v) => v.id !== item.id);
   console.log(listItem.value);
 };
+//Done
 const listItemDone = (item) => {
-  listItem.value = listItem.value.map((v) =>
-    v.id === item.id ? { ...v, complete: !v.complete } : v
-  );
+  listItem.value = listItem.value.map((v) => (v.id === item.id ? { ...v, complete: !v.complete } : v));
 };
+//
 const listItemUpdate = (item) => {
-  listItem.value = listItem.value.map((v) =>
-    v.id === item.id ? { ...v, text: item.text } : v
-  );
+  listItem.value = listItem.value.map((v) => (v.id === item.id ? { ...v, text: item.text } : v));
 };
+//Done
 const listAllClear = () => {
   listItem.value = [];
 };
@@ -46,9 +50,7 @@ const listAllClear = () => {
       </ul>
     </div>
     <div class="todo-actions">
-      <span role="button" aria-label="모두 지우기" @click="listAllClear"
-        >지우기</span
-      >
+      <span role="button" aria-label="모두 지우기" @click="listAllClear">지우기</span>
     </div>
   </div>
 </template>
