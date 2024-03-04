@@ -1,0 +1,139 @@
+/* 전체 스타일 초기화 */
+* {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Malgun Gothic";
+}
+
+/* 본문 스타일 */
+body {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* 할 일 목록 스타일 */
+.todo {
+  width: 400px;
+  margin-top: 50px;
+}
+
+.todo .todo-input {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.todo .todo-input input {
+  border: none;
+  border-bottom: 3px solid #00695c;
+  width: 100%;
+  padding: 10px 0;
+  outline: none;
+}
+
+.todo .todo-input i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 5px;
+  cursor: pointer;
+}
+
+.todo .todo-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 10px;
+  background-color: #009688;
+  font-size: 14px;
+  color: white;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.todo .todo-list .todo-list__left input[type="checkbox"] {
+  vertical-align: -2px;
+  accent-color: grey;
+  margin-right: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 13px;
+  height: 13px;
+  border-radius: 2px;
+  background-color: white;
+}
+
+.todo .todo-list .todo-list__left input[type="checkbox"]:checked {
+  background-color: grey;
+}
+
+.todo .todo-list .todo-list__left input[type="checkbox"]:checked::after {
+  content: "✔";
+  display: inline-block;
+  color: white;
+  font-size: 12px;
+  vertical-align: 2px;
+}
+
+.todo .todo-list .todo-list__right i.fa-plus {
+  display: none;
+}
+
+.todo .todo-list .complete {
+  background-color: gray;
+}
+
+.todo .todo-list .complete i {
+  display: none;
+}
+
+.todo .todo-list .complete i.fa-trash {
+  display: block;
+}
+
+.todo .todo-list .complete .todo-list__left {
+  text-decoration: line-through;
+}
+
+.todo .todo-list .edit .todo-list__left input[type="text"] {
+  border: none;
+  background-color: transparent;
+  color: white;
+  border-left: 3px solid white;
+  width: 100%;
+  padding: 0 10px;
+  outline: none;
+  font-size: 14px;
+}
+
+.todo .todo-list .edit .todo-list__left {
+  flex-grow: 2;
+}
+
+.todo .todo-list .edit .todo-list__left input[type="text"]::placeholder {
+  color: white;
+  font-size: 14px;
+}
+
+.todo .todo-list .edit i {
+  display: none;
+}
+
+.todo .todo-list .edit i.fa-plus {
+  display: block;
+}
+
+.todo .todo-list__right i {
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.todo .todo-actions {
+  text-align: right;
+  cursor: pointer;
+  font-size: 12px;
+}

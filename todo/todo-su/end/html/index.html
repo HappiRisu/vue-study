@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="todo" role="application">
+      <div class="todo-input">
+        <input type="text" id="taskInput" placeholder="할 일을 입력하세요." />
+        <i class="fa-solid fa-plus" role="button" aria-label="등록"></i>
+      </div>
+      <div class="todo-list">
+        <ul role="list">
+          <li role="listitem" aria-checked="false">
+            <div class="todo-list__left">
+              <input type="checkbox" role="checkbox" aria-labelledby="task2" />
+              <span id="task2">할 일 목록 샘플 텍스트.</span>
+            </div>
+            <div class="todo-list__right">
+              <i
+                class="fa-solid fa-pen-to-square"
+                role="button"
+                aria-label="편집"
+              ></i>
+              <i class="fa-solid fa-trash" role="button" aria-label="삭제"></i>
+            </div>
+          </li>
+          <li class="complete" role="listitem" aria-checked="true">
+            <div class="todo-list__left">
+              <input
+                type="checkbox"
+                role="checkbox"
+                checked
+                aria-labelledby="task1"
+              />
+              <span id="task1">할 일 목록 샘플 텍스트.</span>
+            </div>
+            <div class="todo-list__right">
+              <i class="fa-solid fa-trash" role="button" aria-label="삭제"></i>
+            </div>
+          </li>
+          <li class="edit" role="listitem">
+            <div class="todo-list__left">
+              <input
+                type="text"
+                role="textbox"
+                aria-labelledby="task3"
+                placeholder="작업을 입력하세요."
+              />
+            </div>
+            <div class="todo-list__right">
+              <i class="fa-solid fa-plus" role="button" aria-label="수정"></i>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="todo-actions">
+        <span role="button" aria-label="모두 지우기">지우기</span>
+      </div>
+    </div>
+  </body>
+</html>
