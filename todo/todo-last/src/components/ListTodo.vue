@@ -1,27 +1,39 @@
 <script setup>
 const props = defineProps(['todo']);
-const emits = defineEmits(['delete-item', 'edit-content']);
+const emits = defineEmits(['delete-item', 'edit-content', 'todo-done']);
 
 import { ref } from 'vue';
 
-const edited_content = ref(props.todo.content);
+const edited_content = ref('');
 const currentEditingId = ref(null);
-
 const editRef = ref(null);
+
 const editComplete = () => {
   emits('edit-content', { ...props.todo, content: edited_content.value });
   currentEditingId.value = null;
+  edited_content.value = '';
 };
 
 const editItem = (todoId) => {
+  edited_content.value = props.todo.content;
   currentEditingId.value = todoId;
   editRef.value.select();
 };
+
+const itWork = () => {
+  console.log('gd');
+};
 </script>
 <template>
-  <div class="list__item">
+  <div class="list__item" :class="{ done: props.todo.done }">
     <label>
-      <input type="checkbox" name="category" :value="props.todo.category" />
+      <input
+        type="checkbox"
+        name="category"
+        :value="props.todo.done"
+        :checked="props.todo.done"
+        @click="emits('todo-done', props.todo)"
+      />
       <span :class="`bubble ${props.todo.category}`"></span>
     </label>
 

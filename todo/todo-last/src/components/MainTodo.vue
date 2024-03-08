@@ -15,6 +15,10 @@ watch(
   { deep: true }
 );
 
+const getTodo = (newVal) => {
+  todos.value.push(newVal);
+};
+
 const deleteItem = (todo) => {
   todos.value = todos.value.filter((t) => t !== todo);
 };
@@ -23,9 +27,10 @@ const editContent = (todo) => {
   todos.value = todos.value.map((t) => (t.id === todo.id ? { ...t, content: todo.content } : t));
 };
 
-const getTodo = (newVal) => {
-  todos.value.push(newVal);
+const todoDone = (todo) => {
+  todos.value = todos.value.map((t) => (t.id === todo.id ? { ...t, done: !todo.done } : t));
 };
+
 const todo_asc = computed(() => {
   return [...todos.value].sort((a, b) => b.createdAt - a.createdAt);
 });
@@ -51,6 +56,7 @@ onMounted(() => {
         :todo="todo"
         @delete-item="deleteItem"
         @edit-content="editContent"
+        @todo-done="todoDone"
       ></div>
     </section>
   </div>

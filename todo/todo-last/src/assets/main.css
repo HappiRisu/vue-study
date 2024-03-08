@@ -184,6 +184,12 @@ input:checked ~ .bubble::after {
   padding: 1rem 1rem;
   margin: 0.5rem 0;
 }
+.list__item.done {
+  opacity: 0.5;
+}
+.list__item.done .add_todo {
+  text-decoration: line-through;
+}
 
 .list input[type='text'] {
   flex: 1;
