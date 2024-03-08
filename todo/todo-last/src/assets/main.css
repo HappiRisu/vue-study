@@ -54,7 +54,6 @@ h2 {
 
 .header {
   display: flex;
-  justify-content: center;
 }
 
 .header h1,
@@ -183,12 +182,18 @@ input:checked ~ .bubble::after {
   border-radius: 0.5rem;
 
   padding: 1rem 1rem;
+  margin: 0.5rem 0;
 }
 
 .list input[type='text'] {
   flex: 1;
   color: var(--white);
-  margin-left: 0.5rem;
+  padding: 0.25rem;
+  margin: 0 1rem;
+}
+
+.list .editInput {
+  border-bottom: 1px solid #fff;
 }
 
 .button-box button {
@@ -206,8 +211,13 @@ button.edit {
   background-color: var(--green);
 }
 
+button.edit-complete {
+  background-color: var(--personal);
+}
+
 button.delete {
   background-color: var(--red);
+  margin-left: 0.25rem;
 }
 
 .button-box button span {
