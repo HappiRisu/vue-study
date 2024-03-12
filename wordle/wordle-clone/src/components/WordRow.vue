@@ -7,7 +7,7 @@ const props = defineProps({
   submitted: Boolean
 })
 
-const colors = ref(["", "", "", "", "", ""])
+const colors = ref(["", "", "", "", ""])
 
 watch(
   () => props.submitted,

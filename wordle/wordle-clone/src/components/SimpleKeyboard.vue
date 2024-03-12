@@ -25,17 +25,12 @@ onMounted(() => {
         "{enter} z x c v b n m {bksp}",
       ],
     },
-    onKeyPress: onKeyPress,
-    onChange: onChange,
+    onKeyPress: onKeyPress
   });
 });
 
 const onKeyPress = (button) => {
   emit("onKeyPress", button);
-};
-
-const onChange = (input) => {
-  emit("onChange", input);
 };
 
 watch(
