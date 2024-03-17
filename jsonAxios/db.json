@@ -1,0 +1,29 @@
+{
+  "posts": [
+    {
+      "title": "12345",
+      "views": 123,
+      "id": "4637"
+    },
+    {
+      "title": "Wow23",
+      "views": 123123123,
+      "id": "c318"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": null
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": null
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
